@@ -64,6 +64,10 @@ module Middleman
         @aws_secret_access_key || ENV['AWS_SECRET_ACCESS_KEY']
       end
 
+      def bucket
+        @bucket || ENV['AWS_BUCKET']
+      end
+
       def encryption
         @encryption.nil? ? false : @encryption
       end

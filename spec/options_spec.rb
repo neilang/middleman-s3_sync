@@ -9,6 +9,7 @@ describe Middleman::S3Sync::Options do
   its(:prefer_gzip) { is_expected.to eq(true) }
   its(:aws_secret_access_key) { is_expected.to eq(ENV['AWS_SECRET_ACCESS_KEY']) }
   its(:aws_access_key_id) { is_expected.to eq(ENV['AWS_ACCESS_KEY_ID']) }
+  its(:bucket) { is_expected.to eq(ENV['AWS_BUCKET']) }
   its(:caching_policies) { is_expected.to be_empty }
   its(:default_caching_policy) { is_expected.to be_nil }
 
